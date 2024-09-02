@@ -12,7 +12,8 @@
 set $mod Mod1
 
 #exec_always --no-startup-id killall polybar
-exec_always --no-startup-id polybar
+exec_always --no-startup-id xrandr --output HDMI1 --auto --right-of eDP1
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 #exec_always feh --bg-scale ~/Downloads/arch_wallpaper.png
 
 # exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -40,6 +41,11 @@ exec --no-startup-id nm-applet
 
 exec --no-startup-id bash -c 'while true; do ~/.config/i3/battery_notification.sh; sleep 300; done'
 
+workspace 1 output HDMI1
+workspace 2 output HDMI1
+workspace 3 output HDMI1
+workspace 4 output HDMI1
+workspace 5 output HDMI1
 # Below is for volume pop-up notification
 # Volume up
 bindsym XF86AudioRaiseVolume exec  ~/.config/i3/scripts/volume.sh up
@@ -52,6 +58,10 @@ bindsym XF86AudioMute exec  ~/path/to/volume-notification.sh mute
 
 #Below is for history popup of dunst notification
 bindsym $mod+Shift+n exec dunstctl history-pop 
+bindsym $mod+Shift+p exec i3lock -t -i ~/pic/arch_background1.png
+
+#Taking a screen shot ss using flameshot
+bindsym $mod+Shift+s exec flameshot gui
 
 
 
