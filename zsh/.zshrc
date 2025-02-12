@@ -50,15 +50,25 @@ alias la="ls -A"
 alias ll="ls -l"
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias gst='git status'
 alias gco='git checkout'
 alias gbranch='git branch'
 alias gadd='git add .'
 alias gcm='git commit -m'
 alias dvm='~/./dvm_login.exp'
+alias dvmo='~/./dvm_old_login.exp'
+alias avi='ssh root@know-you.me'
 alias back='cd /home/avi/my/dvm/'
+alias fest='cd /home/avi/my/dvm/fest_back_2025'
+alias apogee='docker exec -it web-apogee2025 bash'
+alias tt='docker exec -it timetable_web bash'
+alias dtc='docker exec -it dtc_web bash'
+
 # alias cd="cd | la"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
